@@ -1,0 +1,274 @@
+.left-container{
+  width: 233px;
+  background: #2c3e50;
+  display: inline-block;
+  position: relative;
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+/*圆形/方形按钮_start--------------*/
+.MsgBtnBox, .NewBtnBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+}
+.spot-btn, .square-btn{
+  display: inline-block;
+  /*background: #f0f0f0;*/
+  margin: 10px;
+  /*box-shadow: 0 5px 15px -5px #00000035;*/
+  color: #1abc9c;
+  /*color: #3498db; !*spot_btn设置颜色*!*/
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+  background: #34495e;
+}
+.spot-btn{
+  width: 50px; /*spot_btn设置外框大小*/
+  height: 50px; /*spot_btn设置外框大小*/
+  border-radius: 50%;/*spot_btn设置外框形状*/
+}
+.square-btn{
+  width: 66px; /*spot_btn设置外框大小*/
+  height: 66px; /*spot_btn设置外框大小*/
+  border-radius: 19px;/*spot_btn设置外框形状*/
+}
+.spot-btn i{
+  line-height: 50px; /*spot_btn设置外框大小*/
+  font-size: 23px;/*spot_btn设置图标大小*/
+  transition: .2s linear;
+}
+.square-btn i{
+  line-height: 68px; /*spot_btn设置外框大小*/
+  font-size: 26px;/*spot_btn设置图标大小*/
+  transition: .2s linear;
+}
+.spot-btn:hover i, .square-btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.spot-btn:before, .square-btn:before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.spot-btn:before, .square-btn:before{
+  /*background: #359de2;*/
+  background: #1abc9c;
+  /*background: #3498db;*/
+}
+.spot-btn:hover::before, .square-btn:hover::before{
+  animation: spotBtnAnimation .7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes spotBtnAnimation {
+  0%{
+    left: -110%;
+    top: 90%;
+  }
+  50%{
+    left: 10%;
+    top: -30%;
+  }
+  100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+/*圆形/方形按钮_end-----------------*/
+
+/*海浪按钮_start--------------*/
+.wave-btn{
+  position: relative;
+  display: block;
+  padding: 9px 40px;
+  /*border:2px solid #00aeff;*/
+  color: #1abc9c;
+  background: #34495e;
+  border-radius: 3px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  /*color: #00aeff;*/
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.wave-btn span{
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+}
+.wave-btn:hover span{
+  color: #fff;
+}
+.wave-btn .waveBtnEffect{
+  position: absolute;
+  top: calc(100% + 22px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: #00aeff;*/
+  background: #1abc9c;
+  transition: 1s;
+}
+.wave-btn:hover .waveBtnEffect{
+  top: 0;
+}
+.wave-btn .waveBtnEffect:before{
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: url(../../images/wave_green.png);
+  animation: waveBtnAnimate .5s linear infinite;
+}
+@keyframes waveBtnAnimate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 118px;
+  }
+}
+/*海浪按钮_end--------------*/
+
+/*滑动菜单_start--------------*/
+.MenuBox{
+  position: relative;
+  width: 200px;
+  height: 150px;
+  /*height: 250px;*/
+  background: #34495e;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.menuItem{
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.MenuBox .menuAnimation{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  background: #1abc9c;
+  transition: all .35s ease 0s;
+  border-radius: 4px;
+}
+.MenuBox .start-1, .menuItem:nth-child(1):hover~.menuAnimation {
+  top: 0;
+  height: 50px;
+}
+.MenuBox .start-2, .menuItem:nth-child(2):hover~.menuAnimation{
+  top: 50px;
+  height: 50px;
+}
+.MenuBox .start-3, .menuItem:nth-child(3):hover~.menuAnimation {
+  top: 100px;
+  height: 50px;
+}
+.MenuBox .start-4, .menuItem:nth-child(4):hover~.menuAnimation{
+  top: 150px;
+  height: 50px;
+}
+.MenuBox .start-5, .menuItem:nth-child(5):hover~.menuAnimation{
+  top: 200px;
+  height: 50px;
+}
+/*滑动菜单_end--------------*/
+
+/*菜单栏_start-----------*/
+/*第1行-----------*/
+.MenuRow-1{
+  width: 100%;
+  height: 88px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*border-bottom: solid thin #eeeeee;*/
+}
+.MsgCenterBox{/*左边*/
+  width: 90px;
+  height: 25px;
+  position: relative;
+}
+.badgeStyle {
+  position: absolute;
+  top: 8px;
+  left: 54px;
+}
+.messageBtn{
+  margin-top: 8px;
+}
+.MenuFirstRow-right{/*右边*/
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AvatarBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.avatar{
+  cursor: pointer;
+}
+/*第2行-----------*/
+.MenuRow-2{
+  width: 100%;
+  height: 200px;
+  /*height: 300px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*border-bottom: solid thin #eeeeee;*/
+}
+/*第3行-----------*/
+.MenuRow-3{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.NewConferenceBox{
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+/*第4行-----------*/
+.MenuRow-4{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /*min-height: 100vh;*/
+}
+/*菜单栏_end---------------*/

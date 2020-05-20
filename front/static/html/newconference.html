@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <title>创建会议</title>
+</head>
+
+<body style="background: #f6f6f6;">
+    <div class="container-fluid shadow-sm bg-dark" style="color: white;background: white;margin: 0;padding-left: 28px;padding-right: 28px;padding-top: 5px;padding-bottom: 5px;">
+        <div class="row">
+            <div class="col-11"><h1>创建一个会议</h1></div>
+            
+
+            
+            <div class="col"><h5><a href="../../index.html" style="color: white;">主页</a></h5></div>
+        </div>
+    </div>
+
+    <div class="container-fluid shadow-sm mt-2" style="padding: 28px;background: white;">
+        <div class="container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="">会议简称：</label>
+                    <input type="text" name="conferenceshort" id="conferenceshort" placeholder="请输入" class="form-control" required autofocus autocomplete="on" />
+                    <small class="form-text text-muted">如“ICSE2020”</small>
+                </div>
+                <div class="form-group">
+                    <label for="">会议全称：</label>
+                    <input type="text" name="conferencefull" id="conferencefull" placeholder="请输入" class="form-control" required autocomplete="on" />
+                    <small class="form-text text-muted">如“The 42nd International Conference on Software Engineering”</small>
+                </div>
+                <div class="form-group">
+                    <label for="">举办时间：</label>
+                    <input type="date" name="starttime" id="starttime" class="form-control" required />
+                    <small class="form-text text-muted">请输入会议开始时间</small>
+                    <input type="date" name="finishtime" id="finishtime" class="form-control" required />
+                    <small class="form-text text-muted">请输入会议结束时间</small>
+                </div>
+                <div class="form-group">
+                    <label for="">举办地点：</label>
+                    <input type="text" name="holdplace" id="holdplace" placeholder="请输入" class="form-control" required autocomplete="on" />
+                    <small class="form-text text-muted">如“Seoul, South Korea”</small>
+                </div>
+                <div class="form-group">
+                    <label for="">投稿截止日期：</label>
+                    <input type="date" name="deadline" id="deadline" class="form-control" required />
+                    <small class="form-text text-muted">请输入投稿截止日期</small>
+                </div>
+                <div class="form-group">
+                    <label for="">评审结果发布日期：</label>
+                    <input type="date" name="releasetime" id="releasetime" class="form-control" required />
+                    <small class="form-text text-muted">请输入评审结果发布日期</small>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-dark">创建</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

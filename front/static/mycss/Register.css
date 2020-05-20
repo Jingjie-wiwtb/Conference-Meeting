@@ -1,0 +1,210 @@
+#registerDialog{
+  width: 100%;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.reg-title-box{
+  font-size: 9px;
+}
+
+.reg-title{
+  color: #ccc;
+  margin: 30px;
+  padding: 0;
+  font-size: 8em;
+  letter-spacing: -0.06em;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  position: relative;
+  cursor: default;
+}
+
+.reg-title::after{
+  content: 'Register';
+  color: rgba(0, 128, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+  clip-path: ellipse(100px 100px at 0% 50%);
+  animation: spotlight 3s infinite;
+  background-image: url('../images/打牌.jpg');
+  background-size: 150%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  /*background-clip: text;*/
+  cursor: default;
+}
+
+@keyframes spotlight{
+  0%{
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+
+  50%{
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 100% 50%);
+  }
+
+  100%{
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+}
+
+.reg-container{
+  /*border: solid;*/
+  max-width: 500px;
+  /*height: 326px;*/
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 10px 30px 0 rgba(0, 128, 0, 0.25);*/
+  /*background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.7), rgba(0, 128, 0, 0.3));*/
+
+}
+
+.title{
+  /*color: #fff;*/
+  color: black;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: default;
+  /*border: solid;*/
+  margin-top: 30px;
+}
+
+.underline-yellow{
+  border-bottom: 3px solid #f6e58d;
+}
+
+.input-container{
+  border: solid;
+  padding: 10px 0 15px 0;
+}
+
+.regFormBox{
+  /*border: solid;*/
+  margin: 30px 8%;
+}
+
+.last-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.message{
+  padding: 0 20px;
+}
+
+.btnBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reg-btn-green, .reg-btn-white{
+  display: flex;
+  padding: 7px 25px;
+  margin: 0 10px;
+  border-radius: .3em;
+  font-size: 15px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.reg-btn-green{
+  background: rgba(0, 128, 0, 0.7);
+  border: solid thin transparent;
+  color: #f6e58d;
+}
+
+.reg-btn-white{
+  background: #fff;
+  border: solid thin rgba(0, 128, 0, 0.6);
+  color: rgba(0, 128, 0, 0.7);
+}
+
+.reg-btn-green:hover{
+  background: rgba(0, 128, 0, 0.5);
+  color: #fff;
+}
+
+.reg-btn-white:hover{
+  background: rgba(0, 128, 0, 0.5);
+  border: solid thin transparent;
+  color: white;
+}
+
+.green-small{
+  font-size: 14px;
+  color: rgba(0, 128, 0, 0.99);
+  transition: .2s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.green-small:hover{
+  color: rgba(0, 128, 0, 0.6);
+}
+
+@media (min-width: 320px){
+  .reg-title-box{
+    font-size: 8px;
+  }
+
+  .reg-box-outer{
+    height: 400px;
+  }
+
+  .reg-container{
+    /*padding: 25px;*/
+    width: 90%;
+  }
+}
+
+@media (min-width: 350px) {
+  .reg-box-outer{
+    height: 500px;
+  }
+
+  .reg-container{
+    /*padding: 50px;*/
+    /*width: 50%;*/
+  }
+}
+
+@media (min-width: 400px){
+  .reg-container{
+    /*padding: 55px;*/
+  }
+}
+
+@media (min-width: 450px) {
+  .reg-title-box{
+    font-size: 12px;
+  }
+
+  .reg-container {
+    /*padding: 60px;*/
+  }
+}
+
+@media (min-width: 550px) {
+  .reg-title-box{
+    font-size: 18px;
+  }
+
+  .reg-box-outer{
+    height: 600px;
+  }
+}

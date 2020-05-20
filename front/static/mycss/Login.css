@@ -1,0 +1,279 @@
+.error-message{
+  text-align: left;
+  color: #fff;
+  /*color: transparent;*/
+  padding: 0;
+  margin: 0;
+}
+
+#loginHtml{
+  width: 100%;
+  /*height: 100%;*/
+  background: #f6f6f6;
+  /*background: #333;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  /*font-size: 9px;*/
+}
+
+@media only screen and (min-width: 300px){
+  .log-title{
+    /*border: solid;*/
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    letter-spacing: -3px;
+  }
+
+  .log-box-outer{
+    /*border: solid;*/
+    height: 250px;
+  }
+
+  .log-left-container{
+    /*border: solid;*/
+    min-height: 323px;
+    padding: 25px;
+    width: 80%;
+  }
+
+  .log-right-container{
+    /*border: solid;*/
+    padding: 25px 0;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .log-title{
+    font-size: 105px;
+  }
+
+  .log-box-outer{
+    height: 400px;
+  }
+
+  .log-left-container{
+    padding: 40px;
+  }
+
+  .log-right-container{
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 400px){
+  .log-title{
+    padding: 45px;
+  }
+
+  .log-right-container{
+    padding: 45px 0;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .log-title{
+    font-size: 120px;
+    letter-spacing: -3px;
+  }
+
+  .log-left-container{
+    padding: 60px;
+    /*width: 80%;*/
+  }
+
+  .log-right-container{
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .log-title{
+    font-size: 150px;
+    letter-spacing: -5px;
+  }
+
+  .log-box-outer{
+    height: 500px;
+  }
+
+  .log-left-container{
+    /*border: solid;*/
+    /*width: 80%;*/
+  }
+}
+
+.log-title{
+  /*border: black solid;*/
+  color: #ccc;
+  margin: 30px;
+  padding: 0;
+  /*font-size: 8rem;*/
+  /*letter-spacing: -0.3rem;*/
+  position: relative;
+  cursor: default;
+}
+
+.log-title::after{
+  /*border: solid;*/
+  content: attr(data-spotlight);
+  color: rgba(0, 128, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*-webkit-clip-path: ellipse(100px 100px at 0% 50%);*/
+  clip-path: ellipse(100px 100px at 0% 50%);
+  animation: spotlight 3s infinite;
+  background-image: url('../images/吃薯片.jpg');
+  background-size: 150%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  /*background-clip: text;*/
+  cursor: default;
+}
+
+@keyframes spotlight{
+  0%{
+    /*-webkit-clip-path: ellipse(100px 100px at 0% 50%);*/
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+
+  50%{
+    /*-webkit-clip-path: ellipse(100px 100px at 0% 50%);*/
+    clip-path: ellipse(100px 100px at 100% 50%);
+  }
+
+  100%{
+    /*-webkit-clip-path: ellipse(100px 100px at 0% 50%);*/
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+}
+
+.log-box-outer{
+  /*border: solid;*/
+  width: 100%;
+  justify-content: center;
+  /*height: 500px;*/
+  display: flex;
+  align-items: center;
+}
+
+.log-container{
+  /*border: solid;*/
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px 0 rgba(0, 128, 0, 0.25);
+  background: rgba(0, 128, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-left-container{
+  /*border: solid;*/
+  line-height: 19px;
+  max-width: 400px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.45), rgba(0, 128, 0, 0.05));
+}
+
+.title{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: default;
+  text-align: left;
+}
+
+.underline-yellow{
+  border-bottom: 3px solid #f6e58d;
+}
+
+.input-container{
+  /*line-height: 10px;*/
+  padding: 20px 0 10px 0;
+}
+
+input{
+  border: 0;
+  background: none;
+  outline: 0;
+  color: #fff;
+  font-size: 15px;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #f6e58d;
+  transition: .2s;
+}
+
+input:hover{
+  border-bottom-color: #fff;
+}
+
+::-webkit-input-placeholder{
+  color: #fff;
+}
+
+.message{
+  /*border: white solid;*/
+  display: flex;
+}
+
+.yellow-small{
+  text-decoration: none;
+  font-size: 14px;
+  color: #f6e58d;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.yellow-small:hover{
+  color: #fff;
+}
+
+.log-right-container{
+  width: 40%;
+  /*height: calc(100% - 120px);*/
+  vertical-align: top;
+}
+
+.reg{
+  text-align: center;
+}
+
+.reg-hint{
+  display: flex;
+  height: 174px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.last-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-btn{
+  font-size: 18px;
+  line-height: 18px;
+  background: rgba(0, 128, 0, 0.4);
+  display: flex;
+  padding: 8px 22px;
+  border-radius: .3em;
+  color: #f6e58d;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.login-btn:hover{
+  background: #fdfdfd;
+  color: rgba(0, 128, 0, 0.5);
+}

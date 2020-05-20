@@ -1,0 +1,43 @@
+/*滑动菜单-x_start--------------*/
+.MenuBox-x{
+  position: relative;
+  width: 240px;
+  height: 40px;
+  /*background: #fff;*/
+  border-radius: 4px;
+  font-size: 0;
+  /*box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);*/
+}
+.MenuBox-x .MenuBox-x-item{
+  font-size: 18px;
+  line-height: 40px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.MenuBox-xAnimation{
+  position: absolute;
+  height: 10%;
+  top: 90%;
+  z-index: 0;
+  background: rgba(26, 188, 156, 0.45);
+  transition: all .3s ease 0s;
+  border-radius: 4px;
+}
+.MenuBox-x-item:nth-child(1){
+  width: 120px;
+}
+.MenuBox-x .start-1, .MenuBox-x-item:nth-child(1):hover~.MenuBox-xAnimation{
+  width: 120px;
+  left: 0;
+}
+.MenuBox-x-item:nth-child(2){
+  width: 120px;
+}
+.MenuBox-x .start-2, .MenuBox-x-item:nth-child(2):hover~.MenuBox-xAnimation{
+  width: 120px;
+  left: 120px;
+}
+/*滑动菜单-x_end--------------*/

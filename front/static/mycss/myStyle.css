@@ -1,0 +1,183 @@
+.recBtn-medium{
+  padding: 8px 20px;
+  display: block;
+  margin: 0;
+}
+
+.recBtn-large{
+  padding: 10px 30px;
+  display: block;
+  margin: 0 10px;
+}
+
+.backBtn{
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+
+/*主要框架_start--------------*/
+*{
+  padding: 0;
+  margin: 0;
+}
+.HomeDiv{
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  overflow: auto;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.HomeDiv::-webkit-scrollbar {
+  display: none;
+}
+.right-container{
+  background: #fff;
+  flex: auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+/*主要框架_end--------------*/
+
+/*右边展示框_start*/
+.DisplayBox{
+  flex: 1;
+  width: 95%;
+  /*min-width: 620px;*/
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*第1行/抬头*/
+.DisplayRow-1{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 62px;
+}
+.goBackBtn{
+  cursor: pointer;
+  display: block;
+  transition: .12s ease-in-out;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 20px;
+  font-size: 30px;
+  background: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.goBackBtn:hover{
+  background: rgba(26, 188, 156, 0.45);
+  color: #eee;
+}
+.smallTitle{
+  display: block;
+  font-size: 18px;
+  /*background: rgba(26, 208, 176, 0.45);*/
+  /*box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);*/
+  padding: 0 20px;
+  text-align: center;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 4px solid rgba(26, 188, 156, 0.45) ;
+}
+/*第2行*/
+.DisplayRow-2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*第3行/页码*/
+.DisplayRow-3{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*右边展示框_end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*备用阴影_start*/
+.default-shadow{
+  box-shadow: 0 5px 15px -5px #00000035;
+}
+.sm-shadow{
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+/*备用阴影_end*/
+
+/*施工用边框_start----------------*/
+.border-black{
+  border: solid;
+}
+.border-bottom-black{
+  border-bottom: solid;
+}
+.border-top-black{
+  border-top: solid;
+}
+.border-left-black{
+  border-left: solid;
+}
+.border-right-black{
+  border-right: solid;
+}
+.border-x-black{
+  border-left: solid;
+  border-right: solid;
+}
+.border-y-black{
+  border-top: solid;
+  border-bottom: solid;
+}
+/*施工用边框_end------------------------*/
+
+.tag-default{
+  padding: 0 20%;
+  cursor: default;
+  font-size: 13px;
+}
+.tag-point{
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.textOverFlowHidden{
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
